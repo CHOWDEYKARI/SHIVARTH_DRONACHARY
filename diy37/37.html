@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-37</title>
+</head>
+<body>
+    <script>
+        //unshift()function from scratch
+
+const fruits = ['orange', 'mango', 'apple', 'guava'];
+function unshift (arr, element){
+    for(var i=arr.length; i>=0; i--){
+        arr[i]= arr[i-1];
+        if (i==0){
+            arr[i]=element;
+        }
+    }
+}
+console.log(`array beofre inserting the element:${fruits}`);
+unshift(fruits,"kiwi");
+console.log(`array after inserting the element:${fruits}`);
+
+//forEach() funtion
+
+let fruit = ['orange', 'mango', 'apple', 'guava'];
+function forEach (array,callback){
+    for(var i=0; i<array.length; i++){
+        callback(array[i],i,array);
+        }
+}
+forEach(fruit,(item,index)=>{
+    console.log(`${index +1}.${item}`);
+});
+    </script>
+</body>
+</html>

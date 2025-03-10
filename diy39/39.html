@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-39</title>
+</head>
+<body>
+    <script>
+        class HashTable {
+  constructor(size) {
+    this.size = size;
+    this.table = new Array(size);
+  }
+
+  hash(key) {
+    let hash = 0;
+    for (let i = 0; i < key.length; i++) {
+      hash = (hash + key.charCodeAt(i)) % this.size;
+    }
+    return hash;
+  }
+
+  set(key, value) {
+    const index = this.hash(key);
+    if (!this.table[index]) {
+      this.table[index] = [];
+    }
+    this.table[index].push([key, value]);
+  }
+
+  get(key) {
+    const index = this.hash(key);
+    if (this.table[index]) {
+      for (const [storedKey, value] of this.table[index]) {
+        if (storedKey === key) {
+          return value;
+        }
+      }
+    }
+    return undefined;
+  }
+
+  search(value) {
+    for (const bucket of this.table) {
+      if (bucket) {
+        for (const [key, storedValue] of bucket) {
+          if (storedValue === value) {
+            return key;
+          }
+        }
+      }
+    }
+    return null;
+  }
+
+  display() {
+    for (let i = 0; i < this.size; i++) {
+      if (this.table[i]) {
+        console.log(`Bucket ${i}:`);
+        for (const [key, value] of this.table[i]) {
+          console.log(`  Key: ${key}, Value: ${value}`);
+        }
+      }
+    }
+  }
+}
+
+// Example usage
+const hashTable = new HashTable(10);
+
+hashTable.set('name', 'John');
+hashTable.set('age', 30);
+hashTable.set('city', 'New York');
+
+console.log(hashTable.get('name')); // Output: John
+console.log(hashTable.get('age')); // Output: 30
+console.log(hashTable.get('city')); // Output: New York
+
+console.log(hashTable.search(30)); // Output: age
+
+hashTable.display();
+
+    </script>
+</body>
+</html>
