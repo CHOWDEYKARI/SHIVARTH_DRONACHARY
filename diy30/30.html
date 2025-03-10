@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-30</title>
+</head>
+<body>
+    <script>
+        const ratingdata=[
+    {restaurant:'KFC', rating:5},
+    {restaurant:'Burger King', rating:4},
+    {restaurant:'KFC', rating:3},
+    {restaurant:'Domino', rating:2},
+    {restaurant:'subway', rating:3},
+    {restaurant:'Domino', rating:1},
+    {restaurant:'subway', rating:4},
+    {restaurant:'pizza hut', rating:5},
+];
+
+const avgrating =() => {
+    const headers = Array.from(
+        new Set (ratingdata.map(({restaurant})=>restaurant))
+    );
+    let arr=[];
+    headers.map((head)=>{
+        let total=0;
+        let count=0;
+        const filteredratingdata=ratingdata.filter(
+            (obj)=>obj.restaurant == head
+        );
+        filteredratingdata.map((item)=>{
+            total=filteredratingdata.reduce((prev,next)=>prev + next.rating,0);
+            count++;
+        });
+        arr.push({restaurant:head, avgrating:(total/count).toFixed(2)});
+    });
+    return arr;
+};
+
+const arr = avgrating();
+
+console.log(arr);
+console.log(arr.filter((item)=>item.avgrating>=4));
+
+    </script>
+</body>
+</html>

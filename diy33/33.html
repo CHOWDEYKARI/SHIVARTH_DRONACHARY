@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-33</title>
+</head>
+<body>
+    <script>
+        // Array Example
+const fruits = ['apple', 'banana', 'orange', 'grape'];
+console.log(fruits); // Output: apple
+console.log(fruits.length); // Output: 4
+
+// Object Example
+const person = {
+  name: 'John Doe',
+  age: 30,
+  city: 'New York'
+};
+console.log(person);
+console.log(person.name); // Output: John Doe
+console.log(person.age); // Output: 30
+
+// Set Example
+const uniqueNumbers = new Set();
+uniqueNumbers.add(5);
+uniqueNumbers.add(10);
+uniqueNumbers.add(5); // Won't be added since it's a duplicate
+console.log(uniqueNumbers);
+console.log(uniqueNumbers.size); // Output: 2
+console.log(uniqueNumbers.has(10)); // Output: true
+
+// Map Example
+const phoneBook = new Map();
+phoneBook.set('John', '555-1234');
+phoneBook.set('Jane', '555-5678');
+console.log(phoneBook);
+console.log(phoneBook.get('John')); // Output: 555-1234
+console.log(phoneBook.has('Jane')); // Output: true
+
+    </script>
+</body>
+</html>

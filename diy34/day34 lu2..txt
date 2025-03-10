@@ -1,0 +1,56 @@
+Untitled Note
+2023-03-25_16h42
+
+#shiva#
+No I think I.
+episode
+Exotes and finally we will conclude by the end of this learning unit you will be able to implement merge sort employee quick start merging and quicksorts let's start with the merge sort in this section we will discuss the merge sort algorithm merge sort is the Sorting technique that follows divide and conquer approach this section will be very helpful and interesting to students as they might face merge sort as a question in their examinations encoding or technical interviews for software Engineers sorting algorithms are widely asked so it is important to discuss this topic more sort is similar to quicksort algorithm as it uses the divide and conquer approach to sort the elements it is one of the most popular and efficient sorting algorithm divides the given list of input into two equal halves calls itself for the two halves and then merges the two sorted halves we have to Define
+Special function known as the merge function to perform this merging step the sub lists are divided again and again into halves until the list cannot be divided further then we combine these pair of one element list into two element lists sorting them in this process the sorted to element pairs is merged into the Four Element lists and so on until we get the sorted list back so now let's see the algorithm of smart in the algorithm of salt the merge function is the most important function this function performs the merging of two sorted subarrays so let's have a look at the code and the working of murder shot algorithm to understand the working of the merchant algorithm let's take an unsorted array such as 6253 and 9 we take this unsorted array so let's start with the concept according to much first divide the given array into two.
+The list into equal parts until it cannot be divided further as there are odd number of elements so one list will have one element more than the other one then we divide this list further and we keep dividing the list again and again so in order to divide the list we have to create new arrays of and one and two and one is taken in a variable L and N2 is taken in a variable R we move ahead and iterate over the variable L which is again an array the same thing we do with our as well and finally we start further dividing them as well while incrementing the variables J and K so while it cannot be divided further and that we determine with the help of while Loops we further now start merging them while we merge these areas which are not able to divide further so we call the recursion of the merge sort again and again and
+Really we call a merge so that's how after dividing and sorting we just merge them together so the complexity involved for the merge sort is as follows the best case time complexity for murder shot is o n into log n whereas the average and worst case complexity is also on multiplied by log n the best case complexity it occurs when there is no sorting required that is the array is already sorted hence it comes out to be on into log n since we need to still divide the array and merge it again same goes for average case complexity and the worst case complexity it's a stable algorithm and the place complexity is on where n is the number of input elements and while we provide the unsorted array as an input we get the sorted as an output so let's move on to the next sorting algorithm that is quick sort
+F****** procedure of quick sort is also simple in this section it is going to be helpful and interesting to students as they might face quicksort as a question in their examination sorting is a way of arranging items in a systematic manner quicksort is the widely used sorting algorithm that makes an into log and comparisons in average case for sorting an array of an elements it is faster and highly efficient sorting algorithm this algorithm follows the divide and conquer approach.
+What
+Divide and conquer approach is a technique of breaking down the algorithms into sub problems and then solving the sub problems and combining the results back together to solve the original problem in the Divide phase first pick up reward element after that partition or rearrange the array into sub arrays such that each.
+area code.
+Equal to the private element and each element in the right sub array is larger than.
+and possible
+The pivot element while we cover that means we solve individuals are problems we recursively sought to sub arrays with the help of quicksort finally we need to combine the already sorted array quick sword pics and element as pivot and then it partitions the given array around the picked pivot element in quicksort a large area is divided into two arrays in which one holds the values that are smaller than this specified value also known as the paper.
+Hello I love you more ready for today
+And another area holds the values that are greater than the pivot after that left and right subarrays are also partition using the same approach it will continue until.
+alexand
+The single element remains in the sub array now the question is.
+A good
+get me home
+Lost implementation of quicksort however a typical to determine a
+know that last Sunday
+Good pivot some of the ways of choosing a pivot
+That that party
+Can be pivot can be random select the random pivot from the given array pivot can either be right most
+Hope you last night when someone is coming here
+Element of the leftmost element of the given array select median as a pivot element so these
+Tomorrow
+Are various approaches which we can take so if we look at quick start the quick starts with partitioning the array
+I'll give you the love
+Around a pivot so we choose a pivot randomly as mentioned here and after that we take left and right to the variable I and variable J after providing these
+Yeah when you get out of my buddy
+Values we start with while loops and that to nested by Loops against the pivot the left side array must be less than the pivot while the right side must be greater than the pivot and that is what we determine every time and we do the comparison if left side element is less than equal to the right side element
+You do a swap and increment and decrement the values finally we start with sorting with the help of quicksort function where we start combining the problems again so now after dividing and start to combine the problems we finally get the output as a sorted array and hence we are left with as an output the sorted array so
+That's it
+Quick sort on the complexity base the time complexity of the best case is on multiplied by log n since it goes in a logarithmic fashion the average case complexity is again o n into log n since it is again in the logarithmic fashion whereas the worst case complexity becomes oh and square because sometimes the elements may not be in the jumble in fashion rather they are opposite to the order which which we are looking for suppose if the pivot element is always the last element of the array now in such a case the
+I
+This would occur when the given area is sorted already in ascending or descending order and the worst case time complexity of quicksort is on Square though the worst case complexity of quicksort is more than other sorting algorithm such as smart still it is faster in practice because of average case complexity worst case in quicksort really occurs because of by changing the choice of paper it can be implemented in different ways worst case in quicksort can be
+why did by choosing the right pivot element space complexity is again on multiplied by login whereas this is not considered as a stable algorithm from the space complexity purposes so working of quicksort as we understood we chose the power and we started dividing the array against that private both on the left and the right hand side till no further pivots can be used and finally we combine while we sort if we were to comparison between merge and quick soft.
+Do you have new videos
+please
+Oh and login password is on what is linear average.
+Give me an idea
+Time complexity of both the algorithms is same that is on.
+For life
+Login and worst time complexity is on login for both of them space complexity is.
+baby
+On for Mercer and quicksort it is over one more salt is considered stable whereas quick sort is not considered as a stable algorithm in this video we learned about the mershot working of murshort.
+We also learned about the comparison of performance between merzot
+Creative ideas
+And quicksort in this learning unit you have learned to implement merge
+Hey
+Sort employee quicksort in the next video we

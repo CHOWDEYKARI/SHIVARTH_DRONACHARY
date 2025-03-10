@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-24</title>
+</head>
+<body>
+    <script>restaurantsList=[
+        {
+            id:1,
+            restaurantName:"KFC",
+            address: "anand vihar",
+            city:"delhi",
+        },
+        {
+            id:2,
+            restaurantName:"Dominio",
+            address: "savitha vihar",
+            city:"delhi",
+        },
+        {
+            id:3,
+            restaurantName:"burger king",
+            address: "civil Lines",
+            city:"pune",
+        },
+        {
+            id:4,
+            restaurantName:"Subway",
+            address: "Cantonment",
+            city:"Mumbai",
+        }
+    ];
+    
+    let usersData=[
+        {
+            userId:1,
+            id:1,
+            title:'delectus aut autem',
+            completed: false
+        },
+        {
+            userId:1,
+            id:2,
+            title:'the order is not available',
+            completed: false
+        },
+        {
+            userId:1,
+            id:3,
+            title:'hasitu ausefiasfh hfgiuasdyhfui',
+            completed: false
+        },
+        {
+            userId:1,
+            id:4,
+            title:'ofusd9fuy8 fyhisuadfyh uihifuahds',
+            completed: false
+        },
+        {
+            userId:1,
+            id:5,
+            title:'\jhaiu agfsdghauy hfiuadhfui',
+            completed: false
+        },
+        {
+            userId:1,
+            id:6,
+            title:'jifhui ghuhas ghiuha',
+            completed: false
+        },
+        {
+            userId:1,
+            id:7,
+            title:'jhisdfyh gghalisyh giuasdhgi',
+            completed: false
+        },
+        {
+            userId:1,
+            id:8,
+            title:'dgauysg ygas  auilyhfayh',
+            completed: false
+        },
+        {
+            userId:1,
+            id:9,
+            title:'gausg hgagys ghiuhafsiulyh',
+            completed: false
+        },
+        {
+            userId:1,
+            id:10,
+            title:'ujhgasduh hguygasuyda',
+            completed: false
+        },
+    ];
+    
+    const getData=() =>{
+        const mypromise = new Promise((resolve, reject)=> {
+            setTimeout(()=>{
+                resolve(usersData);
+            }, 4000);  
+        });
+        return mypromise;
+    };
+    
+    const myFun = async ()=> {
+        const x=await getData();
+        console.log(x);
+        x.map((item)=>{
+            console.log(item.title);
+        });
+    };
+    myFun();
+    
+    const spreadFunction = () => {
+        let newarr=[...restaurantsList,[1,2,3]];
+        console.log(newarr);
+    }
+    spreadFunction();
+    
+    const restFunction = () => {
+        let newarr=[...restaurantsList,[1,2,3]];
+        console.log(newarr);
+    }
+    restFunction();</script>
+</body>
+</html>

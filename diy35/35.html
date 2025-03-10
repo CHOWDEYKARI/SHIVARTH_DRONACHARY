@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-35</title>
+    
+    <link rel="stylesheet" href="/" />
+</head>
+
+<body>
+
+    <script>
+        //Linear Search- this code is also TRUE:
+
+        let arr = [256, 32, 187, 56, 4, 99];
+        let n = arr.length;
+        let s = 99;
+        function linearSearch(arr, n, x) {
+            for (let i = 0; i < n; i++) {
+                if (arr[i] == x) {
+                    return i;
+                }
+            }
+            return -1
+        }
+        let result1 = linearSearch(arr, n, s);
+        if (result1 >= 0) {
+            console.log(`Element found at arr[${result1}]`);
+        } else {
+            console.log(`Element not found`);
+        }
+
+
+        //Linear Search
+        function linearSearch(arr, key) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == key) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        let array = [256, 32, 187, 56, 4, 99];
+        let ele = 99;
+        let result = linearSearch(array, ele);
+
+        if (result < 0) {
+            console.log("The element is not in array");
+        }
+        else {
+            console.log(`Element ${ele} is in the array at index ${result}.`);
+        }
+
+        // Binary Sarch - This code is also TRUE:
+
+        let arrr = [4, 32, 56, 99, 187, 256];
+        let nn = arr.length;
+        let ss = 32;
+        function binarySearch(arr, s) {
+            let start = 0;
+            let end = nn;
+            while (start <= end) {
+                let middle = Math.floor(
+                    (start + end) / 2)
+                if (arr[middle] === ss) {
+                    return middle;
+                } else if (ss > arr[middle]) {
+                    start = middle + 1;
+                } else {
+                    end = middle - 1;
+                }
+            }
+            return -1;
+        }
+        result = binarySearch(arr, ss)
+        if (result != -1) {
+            console.log(`Element found at arr[${result}]`);
+        }
+        else {
+            console.log(`Element not found`);
+        }
+
+        // Binary Search
+        function binarySearch(sortedArray, key) {
+            let start = 0;
+            let end = sortedArray.length - 1;
+            while (start <= end) {
+                let middle = Math.floor(
+                    (start + end) / 2);
+                if (sortedArray[middle] === key) {
+                    //found te key
+                    return middle;
+                } else if (sortedArray[middle] < key) {
+                    //continue searching to the right
+                    start = middle + 1;
+                } else {
+                    //search searching to the left
+                    end = middle - 1;
+                }
+            }
+            // key wasn't found
+            return -1;
+        }
+
+        let Arr = [4, 32, 56, 99, 187, 256];
+        let x = 32;
+        let rslt = binarySearch(Arr, x);
+        if (rslt < 0) {
+            console.log("The element is not in the array");
+        }
+        else {
+            console.log(`Element ${x} is in the array at index ${rslt}.`);
+        }
+    </script>
+</body>
+
+</html>

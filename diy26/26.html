@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-26</title>
+    <script>
+        const name = "Girish";
+        const age = 25;
+
+        localStorage.setItem('name', name);
+        localStorage.setItem('age', 25);
+        localStorage.removeItem('age');
+
+        let name1 = localStorage.getItem('name');
+        console.log(name1);
+
+        sessionStorage.setItem('name', name);
+        sessionStorage.setItem('age', 25);
+
+        let arr = ['rahul', 'ravi', 'santosh', 'surya', 'kiran'];
+        localStorage.setItem('employees', JSON.stringify(arr));
+        const arr1 = localStorage.getItem('employees');
+        console.log(arr1);
+        console.log(JSON.parse(arr1));
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

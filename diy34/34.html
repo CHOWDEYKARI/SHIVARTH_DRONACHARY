@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-34</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/" />
+</head>
+
+<body>
+
+    <script>
+
+
+
+        var arr = [6, 2, 5, 3, 9];
+        n = arr.length;
+        function merge(arr, l, m, r) {
+            var n1 = m - l + 1;
+            var n2 = r - m;
+            var L = new Array(n1);
+            var R = new Array(n2);
+            for (var i = 0; i < n1; i++) {
+                L[i] = arr[l + i];
+            }
+            for (var j = 0; j < n2; j++) {
+                R[j] = arr[m + 1 + j];
+            }
+            var j = 0;
+            var k = 1;
+            for (var i = 0; i < n1 && j < n2;) {
+                if (L[i] <= R[j]) {
+                    arr[k] = L[i];
+                    i++;
+                } else {
+                    arr[k] = R[j];
+                    j++;
+                }
+                k++;
+            }
+            while (i < n1) {
+                arr[k] = L[i];
+                i++;
+                k++;
+            }
+            while (j < n2) {
+                arr[k] = R[j];
+                j++;
+                k++;
+            }
+        }
+        function mergeSort(arr, l, r) {
+            if (l >= r) {
+                return;
+            }
+            var m = l + parseInt((r - l) / 2);
+            mergeSort(arr, l, m);
+            mergeSort(arr, m + 1, r);
+            merge(arr, l, m, r);
+        }
+        console.log('Before sorting: ' + arr)
+        mergeSort(arr, 0, n - 1)
+        console.log('After sorting: ' + arr)
+    </script>
+    <script>
+        var arr = [8, 3, 5, 6, 9, 1]
+        n = arr.length
+        function bubbleSort(arr, n) {
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp
+                    }
+                }
+            }
+        }
+
+        console.log("Before BubbleSorting: " + arr)
+        bubbleSort(arr, n)
+        console.log("After BubbleSorting: " + arr)
+
+        var arr1 = [8, 3, 5, 6, 9, 1, 2, 7]
+        n = arr1.length
+        function selectionSort(arr1, n) {
+            for (let i = 0; i < n - 1; i++) {
+
+                for (let j = 0; j < n - 1; j++) {
+                    if (arr1[i] > arr1[j + 1]) {
+                        var temp = arr1[j];
+                        arr1[j] = arr1[j + 1];
+                        arr1[j + 1] = temp
+                    }
+                }
+            }
+        }
+
+        console.log("Before Sorting: " + arr1)
+        selectionSort(arr1, n)
+        console.log("After Sorting: " + arr1)
+
+        var arr2 = [8, 3, 5, 6, 9]
+        n = arr2.length
+        function selectionSort(arr2, n) {
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = i + 1; j < n - 1; j++) {
+                    if (arr2[i] > arr2[j]) {
+                        var temp = arr2[i];
+                        arr2[i] = arr2[j];
+                        arr2[j] = temp
+                    }
+                }
+            }
+        }
+
+        console.log("Before Sorting: " + arr2)
+        selectionSort(arr2, n)
+        console.log("After Sorting: " + arr2)
+    </script>
+</body>
+
+</html>

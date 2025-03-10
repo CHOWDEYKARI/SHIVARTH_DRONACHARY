@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day-25</title>
+<script>
+    
+
+let y='global';
+console.log('value of y in global scope:'+y);
+
+let x='functional';
+console.log('value of y in functional scope:'+x);
+
+let p='block';
+console.log('value of y in block scope:'+p);
+
+let o='global';
+console.log('value of y in lexical scoping:'+o);
+
+function sum(a,b){
+    return a+b;
+}
+console.log(sum(10,5));
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
