@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diy 11</title>
+    <link rel="stylesheet" href="/diy11/style.css">
+    <style>
+        .leftBox {
+            margin-left: 5%;
+            border: 1px solid black;
+            width: 20%;
+            height: 500px;
+          }
+          
+          .rightBox {
+            margin-top: -500px;
+            margin-left: 30%;
+            border: 1px solid rgb(187, 29, 29);
+            width: 60%;
+            height: 600px;
+          }
+          
+          .container {
+            box-shadow: 2px 2px 2px 2px black;
+            width: 80%;
+            margin-left: 5%;
+            margin-top: 10px;
+            height: 250px;
+          }
+          
+          .img1 {
+            border-radius: 20px;
+            height: 120px;
+            width: 120px;
+            margin: 20px;
+          }
+          
+          .heading {
+            margin-top: -150px;
+            margin-left: 160px;
+          }
+          
+          .subHeading, .address {
+            margin-left: 160px;
+          }
+          
+          .smallBox {
+            display: flex;
+            margin-left: 10%;
+          }
+          
+          .bakery {
+            margin-top: 20px;
+            margin-left: 75px;
+          }
+          
+          .list {
+            margin-top: -10px;
+          }
+          
+          .price {
+            margin-top: -10px;
+            margin-left: 25px;
+          }/*# sourceMappingURL=style.css.map */
+    </style>
+</head>
+
+<body>
+    <div class="leftBox">
+        <div class="col-3 col-sm-12 col-md-4 col-lg-3">
+            <div class="filterPanel">
+                <div class="filterPanelHeading">
+                    Filters
+                </div>
+                <div class="filterPanelSubHeading">
+                    Select Location
+                </div>
+                <select class="locationSelection">
+                    <option disabled selected>Select Location</option>
+                    <option>Delhi</option>
+                    <option>Mubai</option>
+                    <option>Kolkata</option>
+                    <option>Hyderabad</option>
+                </select>
+                <div class="filterPanelSubHeading">
+                    Cuisine
+                </div>
+                <input type="checkbox" class="cuisinOption">
+                <label>North India</label>
+                </input>
+                <br />
+                <input type="checkbox" class="cuisinOption">
+                <label>South India</label>
+                </input>
+                <br />
+                <input type="checkbox" class="cuisinOption">
+                <label>Fast Food</label>
+                </input>
+                <br />
+                <input type="checkbox" class="cuisinOption">
+                <label>Street Food</label>
+                </input>
+                <br />
+                <div class="filterPanelSubHeading">
+                    Cost for two
+                </div>
+                <input type="radio" class="cuisinOption" name="cost">
+                <label>Less than &#8377;500</label>
+                </input>
+                <br />
+                <input type="radio" class="cuisinOption" name="cost">
+                <label>&#8377;500 to &#8377;1000</label>
+                </input>
+                <br />
+                <input type="radio" class="cuisinOption" name="cost">
+                <label>&#8377;1000 to &#8377;1500</label>
+                </input>
+                <br />
+                <input type="radio" class="cuisinOption" name="cost">
+                <label>&#8377;1500 to &#8377;2000</label>
+                </input>
+                <br />
+                <input type="radio" class="cuisinOption" name="cost">
+                <label>&#8377;2000+</label>
+                </input>
+                <br />
+                <div class="filterPanelSubHeading">
+                    Sort
+                </div>
+                <input type="radio" class="cuisinOption" name="Price">
+                <label>Price low to high</label>
+                </input>
+                <br />
+                <input type="radio" class="cuisinOption" name="Price">
+                <label>Price high to low</label>
+                </input>
+            </div>
+        </div>
+    </div>
+        <div class="rightBox">
+            <div class="container">
+                <img src="/breakfast.jpg" alt="" class="img1">
+                <h1 class="heading">The Big Chill Cake cakery</h1>
+                <h3 class="subHeading">FORT</h3>
+                <p class="address">Shop 1, Plot D, Samruddhi</p>
+                <hr>
+                <div class="smallBox">
+                    <h4 class="cusines">CUISINES:</h4>
+                    <p class="bakery">Bakery</p>
+                </div>
+                <div class="smallBox">
+                    <h4 class="list">COST FOR TWO:</h4>
+                    <p class="price">₹700</p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="container">
+                <img src="/breakfast.jpg" alt="" class="img1">
+                <h1 class="heading">The Big Chill Cake cakery</h1>
+                <h3 class="subHeading">FORT</h3>
+                <p class="address">Shop 1, Plot D, Samruddhi</p>
+                <hr>
+                <div class="smallBox">
+                    <h4 class="cusines">CUISINES:</h4>
+                    <p class="bakery">Bakery</p>
+                </div>
+                <div class="smallBox">
+                    <h4 class="list">COST FOR TWO:</h4>
+                    <p class="price">₹700</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

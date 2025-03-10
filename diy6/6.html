@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-6</title>
+</head>
+
+<body>
+    <h1>Interview Questions</h1>
+    <h3>1. How do you create a hyperlink in HTML?</h3>
+    <p>
+        In HTML, anchor tags can be used to insert hyperlinks or bookmarks. <br> Hyperlinks
+        are links that can redirect the user from one webpage to another, while
+        bookmarks are used to redirect the users to a specific part of the current
+        webpage. <br> Anchor tags are defined using tags, where the opening tag indicates
+        the beginning of the hyperlink, and the closing tag indicates the end of the
+        hyperlink. <br> Anchor tags by default will appear in any of the following three ways: <br>
+        Unvisited link - Underlined in blue. <br>
+        Visited link - Underlined in purple. <br>
+        Active link - Underlined in red. <br>
+    </p>
+    <!--  -->
+    <h3>Q2. How are HTML elements different from HTML tags?</h3>
+    <p>
+        HTML elements are a collection of HTML tags, their attributes, and data that will
+        be rendered on the browser, while HTML tags are used to hold the data and how
+        it will be rendered on the browser. In simpler terms, HTML tags are a subset of
+        HTML elements: <br>
+        For example, consider the following HTML code:
+    <h1> Welcome to Edureka</h1>
+    Where,
+    <h1> Welcome to Edureka </h1> - This complete line of code
+    is an HTML element.
+    <h1> and </h1> -Therefore These are the HTML tags.
+
+    </p>
+    <!--  -->
+    <h3>Q3. Does a hyperlink only apply to text?
+    </h3>
+    <p>
+        No, a hyperlink can be applied to different types of content, including images,
+        videos, and more.
+        Code example
+    <div>
+        <p>Click the link below</p>
+        <div>
+            <a href=“https://edureka.co”>
+                <img src=“logo.png” width=“100” />
+            </a>
+        </div>
+    </div>
+    </p>
+    <!--  -->
+    <h3>Q4. How to add a picture as the background for a Web page?</h3>
+    <p>
+        This can be achieved by different methods. One of the methods is to use the
+        “background” attribute along with the “body” tag.
+        Example:
+
+        <body background=“bgimg.jpeg”>
+    </p>
+    <!--  -->
+    <h3>Q5. Mention the newly added form element types in HTML5.</h3>
+    <p>
+        There are five new form elements in HTML5. They are:
+        • Datalist: It is used to pre-define options for input. <select> is the alternate
+            tag used to pre-define options, but its use ensures that the user must choose
+            one of the pre-defined options. The datalist tag, instead, suggests that the
+            user chooses from one of the pre-defined options. <br>
+            • Output: It is used to define the result of a calculation. <br>
+            • Keygen: Generates an encryption key that is used to reference data after
+            form submission. (NOTE: This feature is obsolete. It is not recommended to
+            use this, even though this is still supported in some browsers.) <br>
+            • Progress: It is used to create a progress bar on a webpage. <br>
+            • Meter: It is similar to the progress property but creates a gauge within a
+            defined range. <br>
+    </p>
+    <!--  -->
+    <h3>Q6. What happens when an HTML document does not contain the
+        “
+        <!DOCTYPE html>” tag?
+    </h3>
+    <p>
+        The primary purpose of DOCTYPE (or Document Type Declaration) is to inform
+        the browser about the version and type of HTML used.
+        <!DOCTYPE html>
+        specifies that HTML5 is being used, otherwise the browser will not be able to
+        identify it as an HTML document and the HTML5 tags might not function
+        properly
+    </p>
+    <!--  -->
+    <h3>
+        Q7. What is the purpose of the HTML entities?
+    </h3>
+    <p>
+        Some characters are reserved in HTML, like ‘<‘,’>’, ‘&’, ‘/’, etc. To use these characters, we
+            need to use HTML entities. <br>
+            < &lt; &#60;> &gt; &#62;
+                © &copy; &#169;
+                & &amp; &#38;
+                A Non-Breaking Blank Space &nbsp; &#160;
+    </p>
+    <!--  -->
+    <h3>Q8. What is the purpose of “required” the attribute in HTML5?
+    </h3>
+    <p>
+        The required attribute is initialized inside the input tag to make an input field
+        mandatory. When the required attribute is initialized, the form cannot be
+        submitted until the mandatory fields are filled. The required attribute is a
+        boolean attribute that can be used with different input types such as text, URL,
+        email, password, checkbox, radio, etc.
+        Code example
+        <input type=“password” id=“pwd” name=“password” required />
+
+    </p>
+    <!--  -->
+    <h3>Q9. How can you use an anchor tag to open a URL in a new tab
+        when clicked?</h3>
+    <p>
+        To open a link in a new tab on click, you can add the “target” attribute to the
+        anchor tag and define its value to “_blank”. <br>
+        Example:
+        <a href=“#” target=“_blank”>Open this page in new tab</a>
+
+    </p>
+    <!--  -->
+    <h3>Q10. What are inline, block, and inline-block level elements in
+        HTML?</h3>
+    <p>
+        Block Level Elements <br>
+        • The elements start on a new line and occupy the full width available.<br>
+        • We can set the height and width values.<br>
+        • It does not allow other elements to sit next to it.
+        Inline Elements <br>
+        • The elements do not start on a new line and occupy only the required width.<br>
+        • They cannot have a height and width set.<br>
+        • Other elements sit next to them.<br>
+        Inline-Block Elements<br>
+        • The elements do not start on a new line and occupy only the required width.<br>
+        • We can set the height and width values.<br>
+        • Other elements are allowed to sit next to it.<br>
+
+    </p>
+    <!--  -->
+    <h3>Q11. Is it possible to change inline elements into block-level
+        elements?</h3>
+        <p>
+            Yes, this can be done by defining the value of the display attribute to the “block”
+value in its CSS. This will change the inline-level elements to block-level elements
+where the elements take the full width of the container.
+For example,
+display: block;
+        </p>
+        <!--  -->
+        <h3>Q12. What is the need for Meta tags in HTML?</h3>
+        <p>
+            Meta tags are used to describe metadata (information) of the webpage to
+browsers, search engines, and other web services. This information is not
+rendered in the webpage, but it will be used by web crawlers and search engines
+to rank the website for the search result page. They are always defined inside the
+<head> … </head> tags and are typically used to specify the character set,
+keywords, viewport settings, author, and description of the webpage.
+Examples of some commonly used meta tags:
+<meta charset=“UTF-8”> <br>
+<meta name=“viewport” content=“width=device-width, initialscale = 1.0”> <br>
+<meta name=“description” content=“HTML interview questions”> <br>
+<meta name=“author” content=“Author Name”> <br>
+<meta name=“copyright” content=“All Rights Reserved”><br>
+        </p>
+</body>
+
+</html>

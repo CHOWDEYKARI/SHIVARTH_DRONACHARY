@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+    <title>SASS-11</title>
+</head>
+
+<body>
+<div class="container">
+<div class="row heading">
+    Breakfast places in Mumbai
+</div>
+<div class="row">
+    <div class="col-3 col-sm-12 col-md-4 col-lg-3">
+     <div class="filterPanel">
+        <div class="filterPanelHeading">
+            Filters
+        </div>
+        <div class="filterPanelSubHeading">
+            Select Location
+        </div>
+        <select class="locationSelection">
+            <option disabled selected>Select Location</option>
+            <option>Delhi</option>
+            <option>Mubai</option>
+            <option>Kolkata</option>
+            <option>Hyderabad</option>
+        </select>
+        <div class="filterPanelSubHeading">
+            Cuisine
+        </div>
+        <input type="checkbox" class="cuisinOption">
+        <label>North India</label>
+    </input>
+    <br />
+    <input type="checkbox" class="cuisinOption">
+        <label>South India</label>
+    </input>
+    <br />
+    <input type="checkbox" class="cuisinOption">
+        <label>Fast Food</label>
+    </input>
+    <br />
+    <input type="checkbox" class="cuisinOption">
+        <label>Street Food</label>
+    </input>
+    <br />
+<div class="filterPanelSubHeading">
+    Cost for two
+</div>
+<input type="radio" class="cuisinOption" name="cost">
+<label>Less than &#8377;500</label>
+</input>
+<br />
+<input type="radio" class="cuisinOption" name="cost">
+<label>&#8377;500 to &#8377;1000</label>
+</input>
+<br />
+<input type="radio" class="cuisinOption" name="cost">
+<label>&#8377;1000 to &#8377;1500</label>
+</input>
+<br />
+<input type="radio" class="cuisinOption" name="cost">
+<label>&#8377;1500 to &#8377;2000</label>
+</input>
+<br />
+<input type="radio" class="cuisinOption" name="cost">
+<label>&#8377;2000+</label>
+</input>
+<br />
+<div class="filterPanelSubHeading">
+    Sort
+</div>
+<input type="radio" class="cuisinOption" name="Price">
+<label>Price low to high</label>
+</input>
+<br />
+<input type="radio" class="cuisinOption" name="Price">
+<label>Price high to low</label>
+</input>
+     </div>
+    </div>
+    <div class="col-9 col-sm-12 col-md-8 col-lg-9">
+        <div class="resultsPanel">
+<div class="row upperSection">
+    <div class="col-2">
+        <img src="breakfast.jpg" alt="non" class="resultsImage" >
+    </div>
+    <div class="col-10">
+        <div class="resultsHeading"> The Big Chill Cake cakery</div>
+        <div class="resultsSubHeading">FORT</div>
+        <div class="resultsAddress">Shop 1, Plot D, Samruddhi</div>
+    </div>
+</div>
+<hr />
+<div class="row lowerSection">
+<div class="col-2">
+    <div class="resultsAddress">CUISINES:</div>
+    <div class="resultsAddress">COST FOR TWO:</div>
+</div>
+<div class="col-10">
+    <div class="resultsSubHeading">Bakery</div>
+    <div class="resultsSubHeading">&#8377;700</div>
+</div>
+</div>
+        </div>
+        <div class="resultsPanel">
+            <div class="row upperSection">
+                <div class="col-2">
+                    <img src="breakfast.jpg" alt="non" class="resultsImage" >
+                </div>
+                <div class="col-10">
+                    <div class="resultsHeading"> The Bake Shop</div>
+                    <div class="resultsSubHeading">FORT</div>
+                    <div class="resultsAddress">Shop 1, Plot D, Samruddhi</div>
+                </div>
+            </div>
+            <hr />
+            <div class="row lowerSection">
+            <div class="col-2">
+                <div class="resultsAddress">CUISINES:</div>
+                <div class="resultsAddress">COST FOR TWO:</div>
+            </div>
+            <div class="col-10">
+                <div class="resultsSubHeading">Bakery</div>
+                <div class="resultsSubHeading">&#8377;700</div>
+            </div>
+            </div>
+                    </div>
+        <div class="pagination">
+            <div class="paginationButton"><</div>
+            <div class="paginationButton">1</div>
+            <div class="paginationButton">2</div>
+            <div class="paginationButton">3</div>
+            <div class="paginationButton">4</div>
+            <div class="paginationButton">5</div>
+            <div class="paginationButton">></div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+</body>
+</html>

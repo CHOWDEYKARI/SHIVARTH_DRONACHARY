@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="Day11.css"> -->
+    <title>Day-11</title>
+    <style>
+        .heading {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: .5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #192f60;
+            margin: 20px 0;
+        }
+
+        .filterPanel {
+            height: 760px;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+            background-color: white;
+            padding: 15px;
+        }
+
+        .resultsPanel {
+            height: 260px;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+            background-color: white;
+            margin-bottom: 10px;
+        }
+
+        .filterPanelHeading {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 0;
+            letter-spacing: normal;
+            text-align: left;
+            color: #192f60;
+        }
+
+        .filterPanelSubHeading {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: .5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #192f60;
+            margin: 15px 0;
+        }
+
+        .locationSelection {
+            height: 35px;
+            width: 100%;
+            padding: 8px 16.7px 7px 15px;
+            border-radius: 3px;
+            border: solid 1px #192f60;
+        }
+
+        .cuisinOption {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #192f60;
+            margin: 10px;
+        }
+
+        .upperSection {
+            padding: 10px;
+            padding-bottom: 0;
+        }
+
+        .lowerSection {
+            padding: 10px;
+            padding-bottom: 0;
+        }
+
+        .resultsImage {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+        }
+
+        .resultsHeading {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.53;
+            letter-spacing: normal;
+            text-align: left;
+            color: #192f60;
+            margin-left: 35px;
+        }
+
+        .resultsSubHeading {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: left;
+            color: #192f60;
+            margin-left: 35px;
+        }
+
+        .resultsAddress {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: left;
+            color: #636f88;
+            margin-left: 35px;
+        }
+
+        .pagination {
+            display: flex;
+            padding-left: 30%;
+        }
+
+        .paginationButton {
+            border: 1px solid black;
+            height: 30px;
+            width: 30px;
+            margin: 0 10px;
+            text-align: center;
+            border-radius: 5px;
+            padding-top: 2px;
+        }
+
+
+        .box {
+            height: 80px;
+            background-color: red;
+        }
+
+        .topSection {
+
+            width: 100%;
+        }
+
+        .NavBar {
+            height: 1px;
+        }
+
+        .NavBar-Box {
+            width: 80%;
+            margin: auto;
+            text-align: right;
+
+        }
+
+        .LoginButton {
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .LoginButton:hover {
+            background-color: black;
+        }
+
+        .CreateButton {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .CreateButton:hover {
+            background-color: black;
+        }
+
+        /* logo section */
+        .logo {
+            bottom: 66px;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #b3aeae;
+            background-color: white;
+            border-radius: 50%;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            color: brown;
+            margin-top: 20px;
+            cursor: pointer;
+            margin-left: 20px;
+
+        }
+
+        .logo:hover {
+            background-color: aliceblue;
+        }
+
+
+
+        /* CSS rules for tablet screens */
+        @media only screen and (min-width: 768px) and (max-width: 1220px) and (min-width: 420px) {
+
+            /* Styles for screens between 768px and 1220px wide (typically tablets) */
+            .resultsHeading,
+            .resultsSubHeading,
+            .resultsAddress {
+                margin-left: 50px;
+            }
+
+            .lowerSection {
+                padding-top: 0;
+            }
+
+            .lowerSection .resultsAddress {
+                margin-left: 0;
+                width: 100px;
+            }
+        }
+
+        /*  */
+        .resultsImage {
+            background-image: url(https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=600);
+            background-repeat: no-repeat;
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="topSection">
+            <div class="NavBar">
+                <div class="NavBar-Box">
+                    <a href=""><button class="LoginButton">Login</button></a>
+                    <a href=""><button class="CreateButton">Create an Account</button></a>
+                </div>
+            </div>
+            <div class="logo">
+                e!
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row heading">
+            Breakfast places in Mumbai
+        </div>
+        <div class="row">
+            <div class="col-3 col-sm-12 col-md-4 col-lg-3">
+                <div class="filterPanel">
+                    <div class="filterPanelHeading">
+                        Filters
+                    </div>
+                    <div class="filterPanelSubHeading">
+                        Select Location
+                    </div>
+                    <select class="locationSelection">
+                        <option disabled selected>Select Location</option>
+                        <option>Delhi</option>
+                        <option>Mubai</option>
+                        <option>Kolkata</option>
+                        <option>Hyderabad</option>
+                    </select>
+                    <div class="filterPanelSubHeading">
+                        Cuisine :
+                    </div>
+                    <input type="checkbox" class="cuisinOption">
+                    <label>North India</label>
+                    </input>
+
+                    <input type="checkbox" class="cuisinOption">
+                    <label>South India</label>
+                    </input>
+                    <br />
+                    <input type="checkbox" class="cuisinOption">
+                    <label>Fast Food</label>
+                    </input>
+
+                    <input type="checkbox" class="cuisinOption">
+                    <label>Street Food</label>
+                    </input>
+                    <br />
+                    <div class="filterPanelSubHeading">
+                        Cost for two :
+                    </div>
+                    <input type="radio" class="cuisinOption" name="cost">
+                    <label>Less than &#8377;500</label>
+                    </input>
+                    <br />
+                    <input type="radio" class="cuisinOption" name="cost">
+                    <label>&#8377;500 to &#8377;1000</label>
+                    </input>
+                    <br />
+                    <input type="radio" class="cuisinOption" name="cost">
+                    <label>&#8377;1000 to &#8377;1500</label>
+                    </input>
+                    <br />
+                    <input type="radio" class="cuisinOption" name="cost">
+                    <label>&#8377;1500 to &#8377;2000</label>
+                    </input>
+                    <br />
+                    <input type="radio" class="cuisinOption" name="cost">
+                    <label>&#8377;2000+</label>
+                    </input>
+                    <br />
+                    <div class="filterPanelSubHeading">
+                        Sort :
+                    </div>
+                    <input type="radio" class="cuisinOption" name="Price">
+                    <label>Price low to high</label>
+                    </input>
+                    <br />
+                    <input type="radio" class="cuisinOption" name="Price">
+                    <label>Price high to low</label>
+                    </input>
+                </div>
+            </div>
+            <div class="col-9 col-sm-12 col-md-8 col-lg-9">
+                <div class="resultsPanel">
+                    <div class="row upperSection">
+                        <div class="col-2">
+                            <img src="img/11.jpg" alt="non" class="resultsImage">
+                        </div>
+                        <div class="col-10">
+                            <div class="resultsHeading"> The Big Chill Cake cakery</div>
+                            <p></p>
+                            <div class="resultsSubHeading">FORT</div>
+                            <p></p>
+                            <div class="resultsAddress">Shop 1, Plot D, Samruddhi</div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row lowerSection">
+                        <div class="col-2">
+                            <div class="resultsAddress">CUISINES:</div>
+                            <p></p>
+                            <div class="resultsAddress">
+                                <p>COST FOR TWO:</p>
+                            </div>
+
+                        </div>
+                        <div class="col-10">
+                            <div class="resultsSubHeading">Bakery</div>
+                            <p></p>
+                            <div class="resultsSubHeading">&#8377;700</div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resultsPanel">
+                    <div class="row upperSection">
+                        <div class="col-2">
+                            <img src="img/11.jpg" alt="non" class="resultsImage">
+                        </div>
+                        <div class="col-10">
+                            <div class="resultsHeading"> The Bake Shop</div>
+                            <p></p>
+                            <div class="resultsSubHeading">FORT</div>
+                            <p></p>
+                            <div class="resultsAddress">Shop 1, Plot D, Samruddhi</div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row lowerSection">
+                        <div class="col-2">
+                            <div class="resultsAddress">CUISINES:</div>
+                            <p></p>
+                            <div class="resultsAddress">
+                                <p>COST FOR TWO:</p>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="resultsSubHeading">Bakery</div>
+                            <p></p>
+                            <div class="resultsSubHeading">&#8377;700</div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="paginationButton">
+                        < </div>
+                            <div class="paginationButton">1</div>
+                            <div class="paginationButton">2</div>
+                            <div class="paginationButton">3</div>
+                            <div class="paginationButton">4</div>
+                            <div class="paginationButton">5</div>
+                            <div class="paginationButton">></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

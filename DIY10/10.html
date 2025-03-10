@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-10</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <!-- tags -->
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap-grid.rtl.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet" />
+    <!--  -->
+    <!-- <link rel="stylesheet" href="day10.css"> -->
+    <style>
+        /*  */
+
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .box {
+            border: 5px solid red;
+        }
+
+        .homeImage {
+            height: 450px;
+            width: 100%;
+        }
+
+        /* topsection */
+        .topSection {
+            position: absolute;
+            top: 50px;
+            width: 100%;
+        }
+
+        .NavBar {
+            height: 60px;
+        }
+
+        .NavBar-Box {
+            width: 80%;
+            margin: auto;
+            text-align: right;
+
+        }
+
+        .LoginButton {
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .LoginButton:hover {
+            background-color: black;
+        }
+
+        .CreateButton {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer
+        }
+
+        .CreateButton:hover {
+            background-color: black;
+        }
+
+        /* logo section */
+        .logo {
+            bottom: 60px;
+            width: 66px;
+            height: 66px;
+            margin: auto;
+            border: 1px solid #b3aeae;
+            background-color: white;
+            border-radius: 50%;
+            font-size: 64px;
+            font-weight: bold;
+            color: brown;
+            text-align: center;
+            cursor: pointer;
+
+        }
+
+        .logo:hover {
+            background-color: aliceblue;
+        }
+
+        .headerText {
+            font-size: 40px;
+            font-weight: 600;
+            color: white;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .searchoptions {
+            margin-top: 20px;
+            justify-content: center;
+            left: 20%;
+            top: 280px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .locationBox {
+            width: 245px;
+            height: 45px;
+            padding: 10px;
+            background-color: #fff;
+            font-size: 18px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        input {
+            width: 320px;
+            height: 42px;
+            margin-left: 10px;
+            border: 1px;
+        }
+
+        button {
+            padding: 1.5px;
+            background-color: white;
+            border: 1px;
+        }
+
+        .Box {
+            position: relative;
+            width: 300px;
+            height: 1450px;
+            text-align: center;
+            background-color: white;
+            padding: 15px;
+            outline: none;
+            justify-items: center;
+            margin-left: 10px;
+        }
+
+
+        .bottomSection {
+            margin: 30px 10px 60px 60px;
+        }
+
+        .qs-heading {
+            height: 43px;
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 1.53;
+            color: #192f60;
+        }
+
+        .qs-subheading {
+            height: 25px;
+            font-size: 18px;
+            font-style: normal;
+            line-height: 1.5;
+            color: #192f60;
+        }
+
+        .qs-boxes-container {
+            margin-top: 25px;
+        }
+
+        .qs-box {
+            display: inline-block;
+            width: 30%;
+        }
+
+        .qs-box-contents {
+            height: 120px;
+            box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+            background-color: #fff;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .qs-image1 {
+            width: 150px;
+            height: 120px;
+            margin: 0 29px 0 0;
+            background-image: url(https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600);
+        }
+
+        .qs-image2 {
+            width: 150px;
+            height: 120px;
+            margin: 0 29px 0 0;
+            background-image: url(https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600);
+        }
+
+        .qs-image3 {
+            width: 150px;
+            height: 120px;
+            margin: 0 29px 0 0;
+            background-image: url(https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=600);
+        }
+
+        .qs-image4 {
+            width: 150px;
+            height: 120px;
+            margin: 0 29px 0 0;
+            background-image: url(https://images.pexels.com/photos/298217/pexels-photo-298217.jpeg?auto=compress&cs=tinysrgb&w=600);
+        }
+
+        .qs-image5 {
+            width: 150px;
+            height: 120px;
+            margin: 0 29px 0 0;
+            background-image: url(https://images.pexels.com/photos/1148215/pexels-photo-1148215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        }
+
+        .qs-image6 {
+            width: 150px;
+            height: 120px;
+            margin: 0 29px 0 0;
+            background-image: url(https://images.pexels.com/photos/3172566/pexels-photo-3172566.jpeg?auto=compress&cs=tinysrgb&w=600);
+        }
+
+        .qs-item-heading {
+            position: absolute;
+            top: 10px;
+            left: 160px;
+            height: 24px;
+            font-size: 20px;
+            line-height: 0.5;
+            color: #192f60;
+        }
+
+        .qs-item-description {
+            position: absolute;
+            top: 40px;
+            left: 170px;
+            max-width: 170px;
+            font-size: 14px;
+            line-height: 1;
+            color: #192f60;
+        }
+
+        @media (max-width: 1136px) {
+            .qs-item-description {
+                max-width: 150px;
+                left: 170px;
+                top: 30px;
+            }
+
+            .qs-item-heading {
+                left: 170px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .qs-item-description {
+                max-width: 50px;
+                left: 120px;
+                bottom: 30px;
+            }
+
+            .qs-item-heading {
+                left: 120px;
+            }
+
+            .CreateButton {
+                max-width: 320px;
+            }
+
+            .searchoptions {
+                max-width: 300px;
+            }
+
+            .topSection {
+                max-width: 320px;
+                top: 10px;
+            }
+
+            .logo {
+                max-width: 320px;
+                bottom: 20px;
+            }
+        }
+
+        @media (max-width: 920px) {
+            .qs-box {
+                width: 49.5%;
+            }
+
+            .qs-item-description {
+                width: 140px;
+                left: 180px;
+                top: 50px;
+            }
+
+            .qs-item-heading {
+                left: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="https://images.pexels.com/photos/255501/pexels-photo-255501.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="family_dine Image Not Found" class="homeImage" />
+        <div class="topSection">
+            <div class="NavBar">
+                <div class="NavBar-Box">
+                    <a href=""><button class="LoginButton">Login</button></a>
+                    <a href=""><button class="CreateButton">Create an Account</button></a>
+                </div>
+            </div>
+            <div class="logo">e!</div> <br>
+            <div class="headerText">Find the best restaurant, cafes, and bars</div>
+            <div class="searchoptions">
+                <span>
+
+                    <select class="locationBox">
+                        <option selected disabled>---Select Location---</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Hyd" lable="Hyd">Hyderabad</option>
+                        <option value="Hyd-E" label="Hyd-East">Hyderabad-East</option>
+                        <option value="Hyd-W" label="Hyd-West">Hyderabad-West</option>
+                        <option value="Hyd-N" label="Hyd-North">Hyderabad-North</option>
+                        <option value="Hyd-S" label="Hyd-South">Hyderabad-South</option>
+                        <option value="Hyd-C" label="Hyd-center">Hyderabad-Center</option>
+                        <option value="Kol" label="KLKT">Kolkata</option>
+                        <option value="Del" label="DEL">Delhi</option>
+                        <option value="ND" label="ND">Nodia</option>
+                        <option value="Mum" label="MUM">Mumbai</option>
+                    </select>
+                </span>
+                <span class="Box">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <input type="text" name="" placeholder="search for restaurant">
+                </span>
+            </div>
+        </div>
+        <!-- bottom -->
+        <div class="bottomSection">
+            <h1 class="qs-heading">Quick Searches</h1>
+            <h3 class="qs-subheading">Discover restaurants by type of meal</h3>
+            <div class="qs-boxes-container">
+                <div class="qs-box">
+                    <div class="qs-box-contents">
+                        <img src="images/10a.jpg" class="qs-image1" />
+                        <h4 class="qs-item-heading">Breakfast</h4>
+                        <p class="qs-item-description">Start your day with exclusive <br />breakfast options</p>
+                    </div>
+                </div>
+                <div class="qs-box">
+                    <div class="qs-box-contents">
+                        <img src="images/10b.jpg" class="qs-image2" />
+                        <h4 class="qs-item-heading">Lunch</h4>
+                        <p class="qs-item-description">Start your day with exclusive <br /> options</p>
+                    </div>
+                </div>
+                <div class="qs-box">
+                    <div class="qs-box-contents">
+                        <img src="images/10c.jpg" class="qs-image3" />
+                        <h4 class="qs-item-heading">Snacks</h4>
+                        <p class="qs-item-description">Start your day with exclusive <br /> options</p>
+                    </div>
+                </div>
+                <div class="qs-box">
+                    <div class="qs-box-contents">
+                        <img src="images/10d.jpg" class="qs-image4" />
+                        <h4 class="qs-item-heading">Dinner</h4>
+                        <p class="qs-item-description">Start your day with exclusive <br />options</p>
+                    </div>
+                </div>
+                <div class="qs-box">
+                    <div class="qs-box-contents">
+                        <img src="images/10f.jpg" class="qs-image5" />
+                        <h4 class="qs-item-heading">Drinks</h4>
+                        <p class="qs-item-description">Start your day with exclusive <br /> options</p>
+                    </div>
+                </div>
+                <div class="qs-box">
+                    <div class="qs-box-contents">
+                        <img src="images/10g.jpg" class="qs-image6" />
+                        <h4 class="qs-item-heading">Nightlife</h4>
+                        <p class="qs-item-description">Start your day with exclusive <br /> options</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

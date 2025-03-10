@@ -1,0 +1,54 @@
+.leftBox{
+margin-left: 5%;
+border: 1px solid black;
+width: 20%;
+height: 500px;
+}
+
+.rightBox{
+    margin-top: -500px;
+    margin-left: 30%;
+border: 1px solid rgb(187, 29, 29);
+width: 60%;
+height: 600px;
+}
+
+.container{
+    box-shadow: 2px 2px 2px 2px black;
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 10px;
+    height: 250px;
+    
+}
+
+.img1{
+    border-radius: 20px;
+height: 120px;
+width: 120px;
+margin: 20px;
+}
+.heading{
+    margin-top: -150px;
+    margin-left: 160px;
+}
+.subHeading, .address{
+    margin-left: 160px;
+}
+.smallBox{
+    display: flex;
+    margin-left: 10%;
+}
+
+.bakery{
+    margin-top: 20px;
+    margin-left: 75px;
+}
+.list{
+    margin-top: -10px;
+}
+
+.price{
+    margin-top: -10px;
+    margin-left: 25px;
+}
