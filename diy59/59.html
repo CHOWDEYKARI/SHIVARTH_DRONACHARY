@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diy 59</title>
+    <style>
+        p{
+            height: fit-content;
+            
+            /* justify-content: center; */
+            text-align: center;
+            /* align-items: center; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1.What are different types of data models in MongoDB? Explain.</h1>
+<p>In MongoDB, data models are used to structure the data stored in the database. There are primarily two types of data models in MongoDB:
+
+    1. Document Model
+    Definition: The document model is the primary way data is represented in MongoDB. It stores data in BSON format, which is a binary representation of JSON-like documents.
+    Structure: A document contains field-value pairs. The values can be various data types, including arrays and other documents, allowing for nested structures.
+    Advantages:
+    Flexibility: Each document can have its own unique structure, which makes it adaptable to different data requirements.
+    Embedded Documents: Related data can be embedded within a single document, reducing the need for joins and enhancing read performance.
+    Schema-less: While schemas can be enforced using MongoDB schema validation, MongoDB itself does not require a fixed schema, allowing for easy updates and modifications.
+    2. Key-Value Model
+    Definition: In the key-value model, data is stored as key-value pairs. Each document is identified by a unique key, and the value can be any data type.
+    Structure: Simple structure where the key is an identifier, and the value can be a document or any other data type.
+    Advantages:
+    Simplicity: Easy to understand and implement.
+    Performance: Fast lookups and retrievals based on keys.</p>
+    <hr>
+    <h1> 2.What are the terminologies used in relational schema?</h1>
+    <p>In relational databases, the schema defines the structure of the data. Key terminologies used in a relational schema include:
+
+        Table (Relation): A collection of rows (tuples) and columns (attributes) that store related data.
+        Column (Attribute): A field in a table that defines the type of data stored in each row for that field.
+        Row (Tuple): A single record in a table, consisting of one or more fields (columns).
+        Primary Key: A unique identifier for each row in a table. It ensures that each row can be uniquely identified.
+        Foreign Key: A column or set of columns in one table that references the primary key of another table. It establishes a relationship between the two tables.
+        Index: A data structure that improves the speed of data retrieval operations on a table.
+        Schema: The overall structure of the database, including the tables, columns, data types, relationships, constraints, and more.
+        Constraint: Rules enforced on data columns, such as NOT NULL, UNIQUE, CHECK, and DEFAULT.</p>
+        <hr>
+    <h1> 3.What are benefits of object relational Schema</h1>
+    <p>
+        An Object-Relational Schema (ORS) combines features from both object-oriented databases and relational databases. The benefits include:
+
+Data Integrity and Consistency: Like relational databases, ORS enforces data integrity through constraints and schema definitions, ensuring data consistency.
+Complex Data Types: ORS supports complex data types like objects, arrays, and nested structures, allowing for a more natural representation of real-world entities.
+Reusability and Modularity: Object-oriented principles like inheritance and polymorphism allow for reusable and modular schema designs. This can lead to more maintainable and understandable systems.
+Improved Performance: ORS can reduce the need for complex joins and mappings, potentially improving performance for certain types of queries.
+Seamless Integration with Object-Oriented Languages: ORS allows for a more seamless integration between the database schema and object-oriented programming languages, reducing the "impedance mismatch" problem where there are difficulties in mapping data between the two paradigms. This makes it easier to develop and maintain applications.
+    </p>
+</body>
+
+</html>

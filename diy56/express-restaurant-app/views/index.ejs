@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- <html>
+<head>
+  <title>Restaurant List</title>
+</head>
+<body>
+  <h1>Restaurant List</h1>
+  <ul>
+    <% restaurants.forEach(restaurant => { %>
+      <li><%= restaurant.name %> - Cuisine: <%= restaurant.cuisine %></li>
+    <% }); %>
+  </ul>
+</body>
+</html> -->
+<!--  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Restaurant List</title>
+</head>
+
+<body>
+  <h1>Restaurant List</h1>
+  <ul>
+    <% restaurants.forEach(restaurant=> { %>
+      <li>
+        Restautant Name: <%= restaurant.name %> <br> city: <%= restaurant.city %> <br>
+            location: <%= restaurant.location_id %> <br> city_id: <%= restaurant.city_id %> <br>
+            locality : <%= restaurant.locality %> <br> rating: <%= restaurant.aggregate_rating %>, <%= restaurant.rating_text %> <br>
+            price : <%= restaurant.min_price %> <br> phone: <%= restaurant.contact_number %> <br>
+            cuisines: <%= restaurant.cuisine %> <br> pic: <%= restaurant.image %> <br>
+          meal_id:  <%= restaurant.mealtype_id %>
+            
+      </li> <br>
+      <% }); %>
+  </ul>
+</body>
+
+</html>

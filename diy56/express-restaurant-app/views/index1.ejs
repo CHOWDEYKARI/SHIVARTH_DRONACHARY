@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location List</title>
+</head>
+<body>
+  <h1>Location List</h1>
+  <ul>
+    <% locations.forEach(location => { %>
+      <li><%= location.name %> - City: <%= location.city %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>
