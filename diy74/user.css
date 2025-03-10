@@ -1,0 +1,105 @@
+body {
+    height: 100vh;
+    background: navy;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    animation: changeBg 5s infinite alternate linear;
+    place-items: center;
+}
+.name{
+    color: #000;
+}
+
+.beforeForm {
+    height: 220px;
+    width: 450px;
+    background: SandyBrown;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 900;
+    place-items: center;
+    display: grid;
+}
+.beforeForm button {
+    background: navy;
+    height: 60px;
+    width: 180px;
+    color: rgb(177, 25, 25);
+    font-size: 20px;
+    font-weight: 900;
+    border: 3px solid black;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #333333, 0 0 1px 1px #333333;
+}
+
+.beforeForm button:hover {
+    background-color: #8484f4;
+    color: navy;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.afterForm {
+    height: 520px;
+    width: 450px;
+    background: SandyBrown;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 900;
+    place-items: center;
+    display: grid;
+    box-shadow: 2px 1px 3px 1px sandybrown, 0 2px 0 2px sandybrown;
+
+}
+.afterForm form{
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    display: grid;
+   
+}
+.afterForm form input[type=text] {
+    width: 270px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.afterForm input[type=submit] {
+    background-color: navy;
+    height: 60px;
+    width: 180px;
+    color: rgb(199, 70, 70);
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #333333, 0 0 1px 1px #333333;
+}
+
+.afterForm input[type=submit]:hover {
+    background-color: #8484f4;
+    color: navy;
+    text-shadow: 1px 1px 1px #000000;
+}
+@keyframes changeBg {
+    0% {
+        background: #55a35a;
+    }
+    25% {
+        background: #6d3944;
+    }
+    50% {
+        background: #c21e56;
+    }
+    75% {
+        background: #0e4225;
+    }
+    100% {
+        background: #c36241;
+    }
+}
